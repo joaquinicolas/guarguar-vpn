@@ -1,7 +1,8 @@
 version: '3.3'
 services:
   wireguard:
-    image: linuxserver/wireguard
+    build: .
+    image: joaquinicolas96/wireguard
     container_name: wireguard
     cap_add:
       - NET_ADMIN
