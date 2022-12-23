@@ -4,9 +4,9 @@ services:
     build: .
     image: joaquinicolas96/wireguard
     container_name: wireguard
+    privileged: true
     cap_add:
-      - NET_ADMIN
-      - SYS_MODULE
+      - ALL
     environment:
       - PUID=1000
       - PGID=1000
