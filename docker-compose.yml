@@ -1,8 +1,7 @@
 version: '3.3'
 services:
   wireguard:
-    build: .
-    image: joaquinicolas96/wireguard
+    image: linuxserver/wireguard 
     container_name: wireguard
     privileged: true
     cap_add:
@@ -19,8 +18,9 @@ services:
       - INTERNAL_SUBNET=10.13.13.0
     volumes:
       - /home/centos/wireguard:/config
-      - /lib/modules:/lib/modules
+        #      - /lib/modules:/lib/modules
       - /usr/src:/usr/src
+      - /usr/src/kernels/4.18.0-348.7.1.el8_5.x86_64:/lib/modules
     ports:
       - 51820:51820/udp
     sysctls:
