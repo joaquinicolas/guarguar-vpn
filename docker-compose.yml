@@ -5,15 +5,15 @@ services:
     container_name: wireguard
     privileged: true
     cap_add:
-      - ALL
+      - NET_ADMIN
+      - SYS_MODULE
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=America/Buenos_Aires
       # next options are optional
-      - SERVERURL=1.1.1.1
       - SERVERPORT=51820
-      - PEERS=2
+      - PEERS=6
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
     volumes:
