@@ -14,7 +14,7 @@ services:
       # next options are optional
       - SERVERPORT=51820
       - PEERS=6
-      - PEERDNS=auto
+      - PEERDNS=9.9.9.9
       - INTERNAL_SUBNET=10.13.13.0
     volumes:
       - /home/centos/wireguard:/config
