@@ -9,7 +9,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=America/Mendoza
+      - TZ=America/Buenos_Aires
       # next options are optional
       - SERVERURL=1.1.1.1
       - SERVERPORT=51820
